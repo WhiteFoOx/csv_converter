@@ -1,0 +1,6 @@
+{
+    "require": {
+        "php-ds/php-ds": "^1.2",
+        "fzaninotto/faker": "^1.8"
+    }
+}
