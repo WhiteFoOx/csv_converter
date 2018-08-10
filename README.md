@@ -22,7 +22,6 @@
  2. Выполнить команды:
  
          cd path_to_dir \
-         && composer install \
          && make install
         
 Пример запуска программы:
