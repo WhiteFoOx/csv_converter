@@ -23,8 +23,12 @@ function run($input_path, $config_path, $output_path, $delimiter, $skip, $faker)
             continue;
         }
         if (count($data) !== $columns) {
-            echo 'Data is not a correct';
-            exit(1);
+            if ($data[0] == null) {
+                continue;
+            } else {
+                echo 'Data is not a correct' . PHP_EOL;
+                exit(1);
+            }
         }
         foreach ($config_file as $key => $value) {
             $data[$key] = mb_convert_encoding(is_callable($value) ? $value($data[$key], $data, $row, $faker)

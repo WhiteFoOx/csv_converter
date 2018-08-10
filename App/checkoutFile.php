@@ -89,6 +89,7 @@ function checkParams($argv, $argc)
                 break;
             case '--delimiter':
                 $delimiter = $argv[$i + 1];
+                $i++;
                 break;
             case '-c':
                 $config_path = $argv[$i + 1];
