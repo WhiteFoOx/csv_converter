@@ -1,6 +1,10 @@
 {
+    "require-dev": {
+        "phpunit/phpunit": "^7"
+    },
     "require": {
         "php-ds/php-ds": "^1.2",
         "fzaninotto/faker": "^1.8"
     }
+
 }
