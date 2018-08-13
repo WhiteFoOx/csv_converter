@@ -47,7 +47,7 @@ try {
      * Изменение файла
      */
     $config = include($config_path);
-    run($input_path, $config, $output_path, $delimiter, $skip, $faker);
+    convert($input_path, $config, $output_path, $delimiter, $skip, $faker);
 } catch (Exception $e) {
     echo 'Error: ', $e->getMessage(), PHP_EOL;
     exit(1);

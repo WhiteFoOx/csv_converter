@@ -1,6 +1,6 @@
 {
     "autoload": {
-        "files": ["App/run.php","App/verifications.php","App/exceptions.php", "vendor/fzaninotto/faker/src/autoload.php"]
+        "files": ["App/mainConvert.php","App/verifications.php","App/exceptions.php", "vendor/fzaninotto/faker/src/autoload.php"]
     },
     "require-dev": {
         "phpunit/phpunit": "^7"

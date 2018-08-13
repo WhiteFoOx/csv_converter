@@ -1,6 +1,6 @@
 <?php
 
-function run($input_path, $config, $output_path, $delimiter, $skip, $faker)
+function convert($input_path, $config, $output_path, $delimiter, $skip, $faker)
 {
     $row = 0;
     $columns = columnsCount($input_path, $delimiter);
@@ -13,6 +13,7 @@ function run($input_path, $config, $output_path, $delimiter, $skip, $faker)
         if ($skip) {
             $skip = false;
             fputcsv_eol($new_handle, $data, $eol, $delimiter);
+            $row++;
             continue;
         }
         if ($data[0] == null) {

@@ -21,7 +21,6 @@ final class OutputTest extends TestCase
         $fp = $this->filePath;
         $input = "files/goodCommaCSV.csv";
         $output = "files/OutputCSV.csv";
-        require '../App/exceptions.php';
         exec("php " . $fp . " -i $input -c $conf -o $output", $output_res, $return_res);
         if (fileException($input) && fileException($output)) {
             $handle = fopen($input, "r");

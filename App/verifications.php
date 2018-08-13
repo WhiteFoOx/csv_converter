@@ -82,7 +82,9 @@ function detectEOL($input)
 
 function fputcsv_eol($fp, $array, $eol, $delimiter = ',', $enclosure = '"', $escape_char = "\\")
 {
-    fputcsv($fp, $array, $delimiter, $enclosure, $escape_char);
+    if (!fputcsv($fp, $array, $delimiter, $enclosure, $escape_char)) {
+        throw new Exception("Undefined error when writing to a file");
+    }
     if ("\n" != $eol && 0 === fseek($fp, -1, SEEK_CUR)) {
         fwrite($fp, $eol);
     }
