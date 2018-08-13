@@ -24,7 +24,7 @@
          cd path_to_dir \
          && make install
         
-Пример запуска программы:
+Пример запуска программы (путь к файлам необходимо указывать относительно файла converter.php):
                   
         php converter.php -i inputFile.csv -c configFile.php -o outputFile.csv -d ',' --skip-first
 Запуск тестов:

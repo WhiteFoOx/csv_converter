@@ -10,7 +10,7 @@ class ParamsTest extends TestCase
 
     protected function setUp()
     {
-        $this->filePath = "../App/converter.php";
+        $this->filePath = "../converter.php";
     }
 
     /**

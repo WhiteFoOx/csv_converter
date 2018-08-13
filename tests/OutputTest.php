@@ -10,7 +10,7 @@ final class OutputTest extends TestCase
 
     protected function setUp()
     {
-        $this->filePath = '../App/converter.php';
+        $this->filePath = '../converter.php';
     }
 
     /**
@@ -21,9 +21,9 @@ final class OutputTest extends TestCase
         $fp = $this->filePath;
         $input = "files/goodCommaCSV.csv";
         $output = "files/OutputCSV.csv";
-        require_once '../App/checkoutFile.php';
+        require '../App/exceptions.php';
         exec("php " . $fp . " -i $input -c $conf -o $output", $output_res, $return_res);
-        if (checkoutFile($input) && checkoutFile($output)) {
+        if (fileException($input) && fileException($output)) {
             $handle = fopen($input, "r");
                 $data_input = fgetcsv($handle);
                 fclose($handle);
