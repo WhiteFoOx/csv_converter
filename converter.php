@@ -1,10 +1,7 @@
 #!/usr/bin/php
 <?php
 
-require_once __DIR__ . '/vendor/fzaninotto/faker/src/autoload.php';
-require 'App/run.php';
-require 'App/verifications.php';
-require 'App/exceptions.php';
+require 'vendor/autoload.php';
 
 $faker = Faker\Factory::create();
 $help = 'CSV_converter is a program which convert .csv file to a new file using configuration.'

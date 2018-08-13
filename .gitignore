@@ -4,3 +4,5 @@ vendor/
 csv_file.csv
 new_csv_file.csv
 config.php
+tests/files/notRdb.csv
+tests/files/OutputCSV.csv
