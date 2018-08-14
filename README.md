@@ -30,4 +30,4 @@
 Запуск тестов:
 
         cd tests \
-        && phpunit .
+        && make test
