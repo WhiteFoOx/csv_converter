@@ -43,7 +43,8 @@ function fileException($filePath, $default = false)
 function strictException($input_path, $config, $delimiter)
 {
     $input_file = fgetcsv(fopen($input_path, "r"), 1000, $delimiter);
-    if (count($input_file) < max(array_keys($config))) {
+    $config_file = include($config);
+    if (count($input_file) < max(array_keys($config_file))) {
         return false;
     } else {
         return true;
